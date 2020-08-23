@@ -2,5 +2,5 @@ NODE_ENV=development
 PORT=3000
 CLIENT_ID=
 CLIENT_SECRET=
-OAUTH_URL=
-API_URL=
+OAUTH_URL=https://github.com/login
+API_URL=https://api.github.com

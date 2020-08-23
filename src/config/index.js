@@ -1,4 +1,4 @@
-const dotenv = require("dotenv");
+const dotenv = require("dotenv").config();
 
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 const config = {
@@ -8,10 +8,10 @@ const config = {
     oauthUrl: process.env.OAUTH_URL,
     apiUrl: process.env.API_URL,
 }
-const envFound = dotenv.config();
+const envFound = dotenv;
 
 if (envFound.error) {
   throw new Error("⚠️  Couldn't find .env file  ⚠️");
 }
 
-module.exports = { config };
+module.exports = config ;
